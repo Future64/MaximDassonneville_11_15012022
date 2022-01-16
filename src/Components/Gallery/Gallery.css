@@ -1,0 +1,17 @@
+/* Background */
+
+.Gallery {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    /* justify-items: space-between; */
+    flex-wrap: wrap;
+    left: 6.50%;
+    right: 8%;
+    top: 37%;
+    height: auto;
+    width: auto;
+    bottom: 0%;
+    background: #F7F7F7;
+    border-radius: 25px;
+}

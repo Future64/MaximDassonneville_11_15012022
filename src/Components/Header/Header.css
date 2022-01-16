@@ -1,0 +1,26 @@
+.App-header {
+    display: flex;
+    justify-content: space-between;
+    --txt-color: #FF6060;
+    padding: 0px 80px 0px 50px;
+}
+
+.App-header img {
+    height: 120px;
+    width: auto;
+}
+
+.Nav-list {
+    display: flex;
+    margin-top: 50px;
+    list-style: none;
+}
+
+.Nav-list li {
+    margin-right: 50px;
+}
+
+.Nav-list li a {
+    text-decoration: none;
+    color: var(--txt-color)
+}

@@ -1,10 +1,15 @@
 import './App.css'
+import Header from '../Header/Header'
+import Section from '../Section/Section'
+import Gallery from '../Gallery/Gallery'
 
 const App = () => {
     return ( 
 
         <div className = "App" >
-            <header className = "App-header" >Coucou</header>
+           <div>{Header()}</div>
+           <div>{Section()}</div>
+           <div>{Gallery()}</div>
         </div>
     )
 }
