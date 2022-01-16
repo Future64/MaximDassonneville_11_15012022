@@ -1,8 +1,9 @@
 .phot-container {
     position: absolute;
-    width: 1240px;
+    right: 8%;
+    /* width: 1240px; */
     height: 223px;
-    left: 100px;
+    left: 6.50%;
     top: 171px;
     background-color: gray;
     mix-blend-mode: darken;

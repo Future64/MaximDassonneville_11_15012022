@@ -1,13 +1,18 @@
 .Thumb {
-    margin-left: 4.03%;
-    margin-right: 5%;
+    display: flex;
+    /* margin-left: 4.03%;
+    margin-right: 5%; */
     margin-top: 6.76%;
     margin-bottom: 52.23%;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     margin-bottom: 20px;
-    background-color: brown;
+    background-color: var(--txt-color);
     border-radius: 10px;
+}
+
+.Thumb:hover {
+    opacity: 80%;
 }
 
 .thumb-title {
@@ -17,4 +22,17 @@
     left: 5%;
     width: 100px;
     color: white;
+    z-index: 5;
+}
+
+.Thumb-filter {
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-radius: 10px;
 }

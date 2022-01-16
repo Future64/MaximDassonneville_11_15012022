@@ -4,14 +4,16 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    /* justify-items: space-between; */
     flex-wrap: wrap;
     left: 6.50%;
     right: 8%;
     top: 37%;
-    height: auto;
+    /* bottom: 50%; */
+    padding-left: 4.03%;
+    padding-right: 4.03%;
+    height: 70%;
     width: auto;
-    bottom: 0%;
+    /* bottom: 0%; */
     background: #F7F7F7;
     border-radius: 25px;
 }

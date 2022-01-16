@@ -11,6 +11,12 @@ const Gallery = () => {
             {Thumb()}
             {Thumb()}
             {Thumb()}
+            {Thumb()} 
+            {Thumb()}
+            {Thumb()}
+            {Thumb()}
+            {Thumb()}
+            {Thumb()}
         </div>
     )
 }

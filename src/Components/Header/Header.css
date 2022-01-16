@@ -11,16 +11,21 @@
 }
 
 .Nav-list {
+    position: relative;
     display: flex;
     margin-top: 50px;
+    right: 0.3%;
     list-style: none;
 }
 
 .Nav-list li {
-    margin-right: 50px;
+    margin-left: 3vw;
 }
 
 .Nav-list li a {
-    text-decoration: none;
     color: var(--txt-color)
+}
+
+.Nav-list li a:hover {
+    text-decoration: underline;
 }
