@@ -7,7 +7,7 @@
     width: 350px;
     height: 350px;
     margin-bottom: 20px;
-    background-color: var(--txt-color);
+    /* background-color: var(--txt-color); */
     border-radius: 10px;
 }
 

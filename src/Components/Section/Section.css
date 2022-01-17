@@ -1,12 +1,46 @@
 .phot-container {
     position: absolute;
-    right: 8%;
     /* width: 1240px; */
+    right: 8%;
     height: 223px;
     left: 6.50%;
     top: 171px;
+    background: #F7F7F7;
+    border-radius: 25px;
     background-color: var(--txt-color);
+    background-size: cover;
+}
+
+.SectionFilter {
+    position: absolute;
+    right: 8%;
+    height: 223px;
+    left: 6.50%;
+    top: 171px;
+    background: #000000;
     mix-blend-mode: darken;
     opacity: 0.3;
     border-radius: 25px;
+    z-index: 1;
+}
+
+.SectionTxt {
+    position: absolute;
+    left: 30.9%;
+    right: 25.14%;
+    top: 19.32%;
+    bottom: 69.04%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 142.6%;
+    text-align: center;
+    /* or 68px */
+    display: flex;
+    /* justify-content: center;
+    align-content: center; */
+    align-items: flex-end;
+    color: #FFFFFF;
+    z-index: 2;
 }
