@@ -26,9 +26,9 @@
 
 .SectionTxt {
     position: absolute;
-    left: 30.9%;
-    right: 25.14%;
-    top: 19.32%;
+    left: 10.9%;
+    right: 10%;
+    top: 220px;
     bottom: 69.04%;
     font-family: Montserrat;
     font-style: normal;
@@ -36,11 +36,28 @@
     font-size: 42px;
     line-height: 142.6%;
     text-align: center;
-    /* or 68px */
-    display: flex;
-    /* justify-content: center;
-    align-content: center; */
-    align-items: flex-end;
     color: #FFFFFF;
     z-index: 2;
+}
+
+@media screen and (max-width: 870px) {
+    .SectionTxt {
+        top: 240px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 697px) {
+    .phot-container {
+        height: 200px;
+        top: 90px;
+    }
+    .SectionFilter {
+        height: 200px;
+        top: 90px;
+    }
+    .SectionTxt {
+        top: 160px;
+        font-size: 23px;
+    }
 }

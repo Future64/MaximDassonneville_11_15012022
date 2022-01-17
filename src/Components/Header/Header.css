@@ -29,3 +29,41 @@
 .Nav-list li a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 697px) {
+    .App-header img {
+        height: 90px;
+        margin-left: -30px;
+    }
+    .Nav-list {
+        margin-top: 45px;
+    }
+    .Nav-list li {
+        margin-left: 3vw;
+    }
+}
+
+@media screen and (max-width: 516px) {
+    .App-header img {
+        height: 80px;
+        margin-left: -30px;
+    }
+    .Nav-list {
+        position: absolute;
+        margin-top: 37px;
+        margin-right: 30px;
+    }
+    .Nav-list li {
+        margin-left: 0vw;
+        margin-right: 3vw;
+        /* font-size: 12px; */
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .App-header img {
+        height: 50px;
+        margin-left: -30px;
+        margin-top: 18px;
+    }
+}

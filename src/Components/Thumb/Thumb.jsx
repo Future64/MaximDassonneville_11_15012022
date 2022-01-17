@@ -3,13 +3,13 @@ import DATA from '../../DATA'
 
 
 const Thumb = () => {
-    const bgImg = DATA[0].cover
+    const bgImg = DATA[1].cover
     return ( 
         <>
             <div className = "Thumb" style={{backgroundImage: `url(${bgImg})`}}>
                 <a href="thumb-link">
                     <div className='Thumb-filter' >
-                        <span className='thumb-title'>{DATA[0].title}</span>
+                        <span className='thumb-title'>{DATA[1].title}</span>
                     </div>
                 </a>
             </div>

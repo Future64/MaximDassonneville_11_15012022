@@ -1,13 +1,10 @@
 .Thumb {
     display: flex;
-    /* margin-left: 4.03%;
-    margin-right: 5%; */
     margin-top: 6.76%;
     margin-bottom: 52.23%;
     width: 350px;
     height: 350px;
     margin-bottom: 20px;
-    /* background-color: var(--txt-color); */
     border-radius: 10px;
 }
 
@@ -20,7 +17,7 @@
     display: block;
     top: 80%;
     left: 5%;
-    width: 100px;
+    width: 180px;
     color: white;
     z-index: 5;
 }
@@ -35,4 +32,32 @@
     height: 350px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
+}
+
+@media screen and (max-width: 1370px) {
+    .Thumb {
+        width: 270px;
+        height: 270px;
+    }
+    .Thumb-filter {
+        width: 270px;
+        height: 270px;
+    }
+    .thumb-title {
+        top: 75%;
+    }
+}
+
+@media screen and (max-width: 697px) {
+    .Thumb {
+        width: auto;
+        height: 270px;
+    }
+    .Thumb-filter {
+        width: 78vw;
+        height: 270px;
+    }
+    .thumb-title {
+        top: 75%;
+    }
 }
