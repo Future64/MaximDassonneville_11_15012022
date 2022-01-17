@@ -5,7 +5,7 @@
     height: 223px;
     left: 6.50%;
     top: 171px;
-    background-color: gray;
+    background-color: var(--txt-color);
     mix-blend-mode: darken;
     opacity: 0.3;
     border-radius: 25px;

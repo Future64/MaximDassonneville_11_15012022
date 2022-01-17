@@ -1,5 +1,6 @@
 import '../Thumb/Thumb.css'
 
+
 const Thumb = () => {
     return ( 
         <>
