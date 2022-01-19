@@ -7,6 +7,7 @@ import Header from "../Components/Header"
 import Section from "../Components/Section"
 import Gallery from "../Components/Gallery"
 import Footer from "../Components/Footer"
+import LogoHouse from "../Images/LogoHouse.png"
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <Header />
       <Section />
       <Gallery data={DATA} />
-      {/* <Footer/> */}
+      <Footer img={LogoHouse} />
     </div>
   )
 }

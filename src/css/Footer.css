@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     background-color: black;
+    z-index: 5;
 }
 
 .Logo {
@@ -17,4 +18,11 @@
 
 .c {
     color: white;
+}
+
+.LogoHouse {
+    width: 23px;
+    height: 23px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
