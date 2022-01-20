@@ -1,19 +1,14 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { BrowserRouter as Router, Route } from "react-router-dom"
-import DATA from "./DATA"
+import { BrowserRouter } from "react-router-dom"
+// import DATA from "./DATA"
 import "./css/index.css"
-import Home from "./Pages/Home"
-import Error from "./Pages/Error"
-import About from "./Pages/About"
-import Logement from "./Pages/Logement"
+import App from "./Pages/App"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Home data={DATA} />
-    </Router>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById("root")
 )
 

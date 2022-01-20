@@ -13,13 +13,15 @@
 .Nav-list {
     position: relative;
     display: flex;
+    flex-direction: row;
     margin-top: 50px;
     right: 0.3%;
-    list-style: none;
 }
 
 .Nav-list li {
     margin-left: 3vw;
+    color: var(--txt-color);
+    list-style: none;
 }
 
 .Nav-list li a {

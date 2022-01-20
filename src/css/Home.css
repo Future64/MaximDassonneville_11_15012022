@@ -1,5 +1,12 @@
-/* * {
-    font-family: Montserrat;
-    --txt-color: #FF6060;
-    text-decoration: none;
+/* .Home {
+    position: absolute;
+    height: auto;
+    width: 100%;
+} */
+
+
+/* .gallFoot {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 } */

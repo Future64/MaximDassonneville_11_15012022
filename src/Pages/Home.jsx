@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDom from "react-dom"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import "../css/Home.css"
 import DATA from "../DATA"
 import Header from "../Components/Header"
@@ -15,7 +15,7 @@ const Home = () => {
       <Header />
       <Section />
       <Gallery data={DATA} />
-      <Footer img={LogoHouse} />
+      {/* <Footer img={LogoHouse} /> */}
     </div>
   )
 }

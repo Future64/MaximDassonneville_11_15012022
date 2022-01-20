@@ -1,0 +1,33 @@
+.Container-msgError {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    color: var(--txt-color);
+}
+
+.err {
+    margin-top: 5%;
+    font-size: 400px;
+    color: var(--txt-color);
+    font-weight: bold;
+}
+
+.excuse {
+    margin-top: -25%;
+    font-size: 40px;
+    color: var(--txt-color);
+}
+
+.link-home a {
+    display: block;
+    margin-top: 35%;
+    color: var(--txt-color);
+    text-decoration: underline;
+    font-size: 20px;
+}

@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 697px) {
     .Gallery {
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
         top: 320px;
     }
