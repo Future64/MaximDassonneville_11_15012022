@@ -2,6 +2,9 @@
     position: relative;
     /* z-index: 6; */
     width: 70vw;
+    top: 40vh;
+    left: 14.5%;
+    /* right: 25%; */
 }
 
 .dropdown-head {
@@ -22,17 +25,20 @@
 }
 
 .dropdown-arrow {
-    position: relative;
+    position: absolute;
     top: 10px;
-    left: 85%;
+    right: 15px;
     color: white;
     font-size: 30px;
-    transition: rotate 1s;
+    z-index: 5;
 }
 
-.dropdown-arrow:hover {
+.fa-chevron-down:hover {
     cursor: pointer;
-    rotate: 90deg;
+}
+
+.fa-chevron-down:active {
+    transform: rotate(180deg);
 }
 
 .dropdown-body {
@@ -43,7 +49,7 @@
     padding-left: 10px;
     /* padding-right: 10px; */
     padding-bottom: 2px;
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .dropdown-body p {

@@ -3,6 +3,7 @@
     justify-content: space-between;
     --txt-color: #FF6060;
     padding: 0px 80px 0px 50px;
+    z-index: 100;
 }
 
 .App-header img {
