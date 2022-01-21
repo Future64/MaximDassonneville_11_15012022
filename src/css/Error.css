@@ -31,3 +31,46 @@
     text-decoration: underline;
     font-size: 20px;
 }
+
+.link-home a:hover {
+    opacity: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+    .err {
+        font-size: 200px;
+    }
+    .excuse {
+        margin-top: -15%;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .err {
+        font-size: 100px;
+        margin-top: 25%;
+    }
+    .excuse {
+        display: block;
+        text-align: center;
+        margin-top: -8%;
+        font-size: 20px;
+    }
+    .link-home a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .err {
+        font-size: 100px;
+        margin-top: 35%;
+    }
+    .excuse {
+        display: block;
+        text-align: center;
+        margin-top: -23%;
+        font-size: 20px;
+    }
+}

@@ -9,7 +9,7 @@ import Gallery from "../Components/Gallery"
 import Footer from "../Components/Footer"
 import LogoHouse from "../Images/LogoHouse.png"
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="Home">
       <Header />

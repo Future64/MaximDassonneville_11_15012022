@@ -1,13 +1,18 @@
 import React from "react"
-// import ReactDom from "react-dom"
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import "../css/About.css"
 import Header from "../Components/Header"
+import SectionAbout from "../Components/SectionAbout"
+import DropdownLarge from "../Components/DropdownLarge"
+// import DATA from "../DATA"
 
-const About = () => {
+const About = (props) => {
   return (
     <div className="About">
       <Header />
+      <div className="about-cont">
+        <SectionAbout />
+        <DropdownLarge data={props} />
+      </div>
     </div>
   )
 }
