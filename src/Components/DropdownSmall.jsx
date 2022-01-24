@@ -17,9 +17,9 @@ export default class DropdownSmall extends Component {
 
   render() {
     const content = this.props.content
-    console.log(this.props.content.toString())
+    // console.log(this.props.content.toString())
     return (
-      <div className="dropdown-Container">
+      <div className="dropdownSmall-Container">
         <div className="dropdown-head">
           <h2 className="dropdown-title">{this.props.title}</h2>
           <button onClick={this.handleBodyDropdown} className="dropdown-arrow">

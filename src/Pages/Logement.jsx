@@ -16,7 +16,9 @@ const Logement = (props) => {
   const location = props.data.location
   const name = props.data.host.name
   const photoOwner = props.data.host.picture
-  console.log(props.data.host.picture)
+  const tags = props.data.tags
+
+  console.log(props.data)
   return (
     <div className="Logement">
       <Header />
@@ -28,9 +30,9 @@ const Logement = (props) => {
           <h1 className="title-Logement">{title}</h1>
           <p className="location">{location}</p>
           <div className="tag-Group">
-            <Tag />
-            <Tag />
-            <Tag />
+            {tags.map((tag) => {
+              return <Tag name={tag} key={`${props.data.id.toString()}-tag`} />
+            })}
           </div>
         </div>
         <div className="container-Details-second">

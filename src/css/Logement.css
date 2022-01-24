@@ -16,6 +16,8 @@ h1 {
 
 .tag-Group {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
 }
 
 .container-Details-second {
@@ -24,13 +26,14 @@ h1 {
 
 .dropSmall-container {
     position: absolute;
-    left: -14%;
-    right: -50px;
+    left: -150px;
+    /* right: -50px; */
     top: -300px;
-    width: 105%;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-direction: row;
+    /* background-color: yellow; */
     /* justify-content: space-around; */
     /* align-content: center;
     align-items: center; */

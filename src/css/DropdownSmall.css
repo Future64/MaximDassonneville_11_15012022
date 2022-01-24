@@ -1,11 +1,11 @@
-.dropdown-Container {
+.dropdownSmall-Container {
     position: relative;
     /* z-index: 6; */
     width: 40vw;
     top: 40vh;
     margin-right: 60px;
-    /* left: 70px; */
-    /* right: 25%; */
+    left: 150px;
+    right: 5px;
 }
 
 .dropdown-head {

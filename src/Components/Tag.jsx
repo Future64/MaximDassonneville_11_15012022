@@ -1,11 +1,12 @@
 import React from "react"
 import "../css/Tag.css"
 
-const Tag = () => {
+const Tag = (props) => {
+  console.log(props.key)
   return (
     <>
       <div className="tag-container">
-        <span className="tag-name">Cosy</span>
+        <span className="tag-name">{props.name}</span>
       </div>
     </>
   )
