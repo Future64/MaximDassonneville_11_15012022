@@ -1,9 +1,10 @@
 .dropdown-Container {
     position: relative;
     /* z-index: 6; */
-    width: 70vw;
+    width: 40vw;
     top: 40vh;
-    left: 14.5%;
+    margin-right: 60px;
+    /* left: 70px; */
     /* right: 25%; */
 }
 

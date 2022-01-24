@@ -1,14 +1,13 @@
+import { Link } from "react-router-dom"
 import "../css/Thumb.css"
 
 const Thumb = (props) => {
   return (
     <>
       <div className="Thumb" style={{ backgroundImage: `url(${props.cover})` }}>
-        <a href="thumb-link">
-          <div className="Thumb-filter">
-            <span className="thumb-title"> {props.title} </span>
-          </div>
-        </a>
+        <div className="Thumb-filter">
+          <span className="thumb-title"> {props.title} </span>
+        </div>
       </div>
     </>
   )

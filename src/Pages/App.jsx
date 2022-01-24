@@ -13,8 +13,8 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home data={DATA} />} />
-        <Route path="/about" element={<About data={dataAbout}/>} />
-        <Route path="/logement" element={<Logement />} />
+        <Route path="/about" element={<About data={dataAbout} />} />
+        <Route path="/logement" element={<Logement data={DATA[0]} />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>

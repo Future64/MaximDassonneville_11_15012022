@@ -1,0 +1,21 @@
+.tag-container {
+    /* position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%; */
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 40%;
+    background: #FF6060;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.tag-name {
+    color: white;
+    font-size: 14px;
+}

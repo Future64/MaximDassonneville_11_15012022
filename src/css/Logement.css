@@ -1,0 +1,86 @@
+h1,
+p {
+    color: var(--txt-color);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: -10px;
+    margin-top: 13px;
+}
+
+.location {
+    font-size: 18px;
+}
+
+.tag-Group {
+    display: flex;
+}
+
+.container-Details-second {
+    margin-top: 10px;
+}
+
+.dropSmall-container {
+    position: absolute;
+    left: -14%;
+    right: -50px;
+    top: -300px;
+    width: 105%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    /* align-content: center;
+    align-items: center; */
+}
+
+.section-Details {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 85vw;
+    top: 42%;
+    left: 6.50%;
+    right: 8%;
+    /* z-index: 100; */
+}
+
+.photo-Owner {
+    height: 70px;
+    width: 70px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.name-Owner {
+    display: block;
+    width: 100px;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.zone-Owner {
+    position: relative;
+    top: 13px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+
+.container-Stars {
+    margin-top: 35px;
+    margin-left: 13px;
+}
+
+.fa-star {
+    font-size: 30px;
+    color: #E3E3E3;
+    margin-left: 5px;
+}
+
+.star-color {
+    color: var(--txt-color);
+}
