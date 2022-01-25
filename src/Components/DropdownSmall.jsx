@@ -8,16 +8,9 @@ export default class DropdownSmall extends Component {
     this.setState({ openBody: !this.state.openBody })
   }
 
-  // handleContentEquipments = () => {
-  //   const equipements = this.props.content
-  //   equipements.foreach((elt) => {
-  //     return <span>{elt}</span>
-  //   })
-  // }
-
   render() {
     const content = this.props.content
-    // console.log(this.props.content.toString())
+
     return (
       <div className="dropdownSmall-Container">
         <div className="dropdown-head">
