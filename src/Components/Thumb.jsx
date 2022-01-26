@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../css/Thumb.css"
+import "../css/thumb.css"
 
 const Thumb = (props) => {
   // console.log(props)

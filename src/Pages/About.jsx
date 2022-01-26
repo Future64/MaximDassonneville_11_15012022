@@ -1,9 +1,8 @@
 import React from "react"
-import "../css/About.css"
-import Header from "../Components/Header"
-import SectionAbout from "../Components/SectionAbout"
-import DropdownLarge from "../Components/DropdownLarge"
-
+import "../css/about.css"
+import Header from "../components/Header"
+import SectionAbout from "../components/SectionAbout"
+import DropdownLarge from "../components/DropdownLarge"
 
 const About = (props) => {
   return (

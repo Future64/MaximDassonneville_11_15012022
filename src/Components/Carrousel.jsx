@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "../css/Carrousel.css"
+import "../css/carrousel.css"
 
 export default class Carrousel extends Component {
   state = { photos: this.props.photos }

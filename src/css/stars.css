@@ -1,0 +1,9 @@
+.fa-star {
+    font-size: 30px;
+    color: #E3E3E3;
+    margin-left: 5px;
+}
+
+.star-color {
+    color: var(--txt-color);
+}

@@ -1,5 +1,5 @@
-import "../css/Section.css"
-import IMG from "../Images/IMG.png"
+import "../css/section.css"
+import IMG from "../asset/IMG.png"
 
 const Section = () => {
   const sectionText = "Chez vous, partout et ailleurs"

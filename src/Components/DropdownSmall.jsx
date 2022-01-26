@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "../css/DropdownSmall.css"
+import "../css/dropdownSmall.css"
 
 export default class DropdownSmall extends Component {
   state = { openBody: false }

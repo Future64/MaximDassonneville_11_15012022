@@ -1,4 +1,4 @@
-import "../css/Gallery.css"
+import "../css/gallery.css"
 import { Routes, Route, Link } from "react-router-dom"
 import Logement from "../Pages/Logement"
 import Thumb from "./Thumb"

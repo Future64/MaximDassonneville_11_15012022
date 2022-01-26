@@ -1,5 +1,5 @@
-import "../css/SectionAbout.css"
-import Kalen from "../Images/kalen.png"
+import "../css/sectionAbout.css"
+import Kalen from "../asset/kalen.png"
 
 const SectionAbout = () => {
   return (

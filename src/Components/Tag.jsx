@@ -1,5 +1,5 @@
 import React from "react"
-import "../css/Tag.css"
+import "../css/tag.css"
 
 const Tag = (props) => {
   console.log(props.key)

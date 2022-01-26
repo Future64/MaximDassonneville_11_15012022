@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import ReactDom from "react-dom"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import "../css/Logement.css"
-import Header from "../Components/Header"
-import DropdownSmall from "../Components/DropdownSmall"
-import Carrousel from "../Components/Carrousel"
-import Tag from "../Components/Tag"
+import "../css/logement.css"
+import Header from "../components/Header"
+import DropdownSmall from "../components/DropdownSmall"
+import Carrousel from "../components/Carrousel"
+import Tag from "../components/Tag"
+import Stars from "../components/Stars"
 
 class Logement extends Component {
   state = {
@@ -55,31 +56,7 @@ class Logement extends Component {
               ></div>
             </div>
             <div className="container-Stars">
-              <i
-                className={
-                  this.state.openBody ? "fas fa-star" : "fas fa-star star-color"
-                }
-              ></i>
-              <i
-                className={
-                  this.state.openBody ? "fas fa-star" : "fas fa-star star-color"
-                }
-              ></i>
-              <i
-                className={
-                  this.state.openBody ? "fas fa-star" : "fas fa-star star-color"
-                }
-              ></i>
-              <i
-                className={
-                  this.state.openBody ? "fas fa-star" : "fas fa-star star-color"
-                }
-              ></i>
-              <i
-                className={
-                  this.state.openBody ? "fas fa-star" : "fas fa-star star-color"
-                }
-              ></i>
+              <Stars data={this.props.data.rating} />
             </div>
           </div>
           <div className="dropSmall-container">

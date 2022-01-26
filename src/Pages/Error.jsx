@@ -1,8 +1,8 @@
 import React from "react"
 import ReactDom from "react-dom"
 import { Link } from "react-router-dom"
-import Header from "../Components/Header"
-import "../css/Error.css"
+import Header from "../components/Header"
+import "../css/error.css"
 
 const Error = () => {
   return (
