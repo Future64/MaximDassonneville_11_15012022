@@ -47,7 +47,6 @@ export default class Carrousel extends Component {
   }
 
   render() {
-    console.log(this.getSRC())
     return (
       <div>
         <div className="SectionCarrousel">

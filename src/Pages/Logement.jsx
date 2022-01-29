@@ -52,7 +52,13 @@ class Logement extends Component {
             <p className="location">{this.state.location}</p>
             <div className="tag-Group">
               {this.state.tags.map((tag) => {
-                return <Tag tag={tag} data={this.props.data.host.name} />
+                return (
+                  <Tag
+                    tag={tag}
+                    data={this.props.data.host.name}
+                    key={`tag-${tag}`}
+                  />
+                )
               })}
             </div>
           </div>
