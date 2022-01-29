@@ -13,6 +13,7 @@ const Stars = (props) => {
           className={
             i < ratingCurrent ? "fas fa-star star-color" : "fas fa-star"
           }
+          key={`star-${[i]}`}
         ></i>
       )
     }

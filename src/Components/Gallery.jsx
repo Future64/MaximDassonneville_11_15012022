@@ -16,6 +16,7 @@ const Gallery = (props) => {
               cover={item.cover}
               title={item.title}
               key={`${item.id}-${item.host.name}`}
+              data={item}
             />
           </Link>
         )

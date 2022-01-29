@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import ReactDom from "react-dom"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
-import "../css/logement.css"
+import "../css/Logement.css"
 import Header from "../components/Header"
 import DropdownSmall from "../components/DropdownSmall"
 import Carrousel from "../components/Carrousel"
@@ -19,7 +19,21 @@ class Logement extends Component {
     photoOwner: this.props.data.host.picture,
     tags: this.props.data.tags,
     stars: false,
+    count: 0,
   }
+
+  // this.state.setState(this.count => {
+  //   // this.count++
+  // })
+  // incrementCount = () => {
+  // }
+  // componentDidMount() {
+  //   this.setState({ return this.state.count++})
+  // }
+
+  // componentDidUpdate() {
+  //   this.setState({ count: this.count++ })
+  // }
 
   handleStars = () => {
     this.setState({ stars: !this.state.stars })
@@ -38,12 +52,7 @@ class Logement extends Component {
             <p className="location">{this.state.location}</p>
             <div className="tag-Group">
               {this.state.tags.map((tag) => {
-                return (
-                  <Tag
-                    name={tag}
-                    key={`${this.props.data.id.toString()}-tag`}
-                  />
-                )
+                return <Tag tag={tag} data={this.props.data.host.name} />
               })}
             </div>
           </div>

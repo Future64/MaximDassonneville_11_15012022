@@ -46,8 +46,9 @@
 }
 
 .photo-Carrousel {
+    min-width: 100%;
     height: auto;
-    width: 100%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 870px) {
