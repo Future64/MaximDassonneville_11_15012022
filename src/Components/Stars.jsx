@@ -19,6 +19,7 @@ const Stars = (props) => {
     }
     return ratingCollection
   }
+
   return <div className="Stars">{renderStars()}</div>
 }
 

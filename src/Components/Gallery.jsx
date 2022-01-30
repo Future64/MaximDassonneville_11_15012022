@@ -4,7 +4,6 @@ import Logement from "../Pages/Logement"
 import Thumb from "./Thumb"
 
 const Gallery = (props) => {
-  console.log(props)
   return (
     <div className="Gallery">
       {props.data.map((item) => {
@@ -17,6 +16,7 @@ const Gallery = (props) => {
               title={item.title}
               key={`${item.id}-${item.host.name}`}
               data={item}
+              id={item.id}
             />
           </Link>
         )

@@ -10,6 +10,7 @@ import Logement from "./Pages/Logement"
 
 const App = () => {
   const path = "/logement"
+  console.log(DATA)
   return (
     <div className="App">
       <Routes>
