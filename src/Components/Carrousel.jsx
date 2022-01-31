@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "../css/Carrousel.css"
 
 const Carrousel = (props) => {
-  const [pictures, setPictures] = useState(props.photos)
+  const [pictures] = useState(props.photos)
   let [currentPictureIndex, setCurrentPictureIndex] = useState(0)
 
   const getSRC = () => {

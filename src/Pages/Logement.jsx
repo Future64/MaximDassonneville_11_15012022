@@ -1,4 +1,5 @@
 import React from "react"
+import { useParams } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
 import DropdownSmall from "../components/DropdownSmall"
@@ -8,6 +9,8 @@ import Stars from "../components/Stars"
 import Error from "../Pages/Error"
 
 const Logement = (props) => {
+  const params = useParams()
+  console.log(params)
   return (
     <div className="Logement">
       <Header />
