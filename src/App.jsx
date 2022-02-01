@@ -7,6 +7,9 @@ import Error from "./Pages/Error"
 import About from "./Pages/About"
 import Logement from "./Pages/Logement"
 
+/**
+ * Import des datas venant du fichier AllData.json
+ */
 let DATA = []
 fetch(" http://localhost:3000/AllData.json ", {
   headers: {
@@ -23,11 +26,13 @@ fetch(" http://localhost:3000/AllData.json ", {
     console.log(DATA)
   })
 
+/**
+ * Fonction App
+ */
 const App = () => {
   const params = useParams()
   const location = useLocation()
   const path = "/logement/:id"
-  // console.log(location.pathname)
 
   // let getData = () => {
   //   DATA.map((item) => {
@@ -35,16 +40,17 @@ const App = () => {
   //     if (path === location.pathname) {
   //       return item
   //     }
+  //     return item
   //   })
   // }
 
-  console.log(DATA)
+  // console.log(DATA)
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home data={DATA} />} />
         <Route path="/about" element={<About data={dataAbout} />} />
-        <Route path={path} element={<Logement data={DATA[13]} />} />
+        <Route path={path} element={<Logement data={DATA} />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </div>
