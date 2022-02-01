@@ -1,14 +1,15 @@
 import "../css/gallery.css"
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route, Link, useParams } from "react-router-dom"
 import Logement from "../Pages/Logement"
 import Thumb from "./Thumb"
 
 const Gallery = (props) => {
-  console.log(props)
+  const params = useParams()
+  console.log(params)
   return (
     <div className="Gallery">
       {props.data.map((item) => {
-        const path = "/logement"
+        const path = `/logement/${item.id}`
 
         return (
           <Link to={path}>
@@ -17,6 +18,7 @@ const Gallery = (props) => {
               title={item.title}
               key={`${item.id}-${item.host.name}`}
               data={item}
+              id={item.id}
             />
           </Link>
         )

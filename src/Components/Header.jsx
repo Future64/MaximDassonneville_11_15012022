@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import "../css/header.css"
+import { NavLink } from "react-router-dom"
+import "../css/Header.css"
 
 const Header = () => {
   return (
@@ -13,10 +13,20 @@ const Header = () => {
         <nav>
           <ul className="Nav-list">
             <li>
-              <Link to="/">Accueil</Link>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "activeLink" : "")}
+              >
+                Accueil
+              </NavLink>
             </li>
             <li>
-              <Link to="/about">A propos</Link>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "activeLink" : "")}
+              >
+                A propos
+              </NavLink>
             </li>
           </ul>
         </nav>
