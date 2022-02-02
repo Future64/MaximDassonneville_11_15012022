@@ -1,5 +1,5 @@
 .About {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,17 +7,21 @@
 }
 
 .dropdown-items {
-    position: absolute;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
     height: 30%;
     width: 100%;
-    top: -50px;
 }
 
 @media screen and (max-width: 698px) {
     .dropdown-items {
-        position: absolute;
+        /* position: relative; */
+        top: 0px;
         height: 100%;
-        top: -150px;
         width: 100%;
     }
 }

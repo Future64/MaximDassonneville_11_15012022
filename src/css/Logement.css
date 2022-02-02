@@ -1,6 +1,11 @@
         h1,
-        p {
+        p,
+        li {
             color: var(--txt-color);
+        }
+        
+        li {
+            display: block;
         }
         
         h1 {
@@ -20,13 +25,29 @@
             max-width: 800px;
         }
         
-        .dropSmall-container {
-            width: 100vw;
+        .drop-container {
+            margin-top: 20px;
+            width: 100%;
             height: auto;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+        }
+        
+        .box-drop {
+            /* margin-left: 70px;
+            margin-right: 20px; */
+            width: 100%;
+        }
+        
+        .box1 {
+            margin-left: 70px;
+            margin-right: 10px;
+        }
+        
+        .box2 {
             margin-right: 70px;
+            margin-left: 10px;
         }
         
         .section-Details {
@@ -100,10 +121,6 @@
             h1 {
                 font-size: 19px;
             }
-            .dropSmall-container {
-                flex-direction: column;
-                margin-right: 70px;
-            }
             .name-Owner {
                 font-size: 13px;
                 width: 50%;
@@ -113,5 +130,21 @@
             }
             .location {
                 font-size: 14px;
+            }
+            .box1 {
+                margin-right: 70px;
+                margin-left: 70px;
+            }
+            .box2 {
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+            .drop-container {
+                margin-top: 40px;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
             }
         }

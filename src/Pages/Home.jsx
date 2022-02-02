@@ -2,6 +2,7 @@ import React from "react"
 import ReactDom from "react-dom"
 import { Routes, Route } from "react-router-dom"
 import "../css/Home.css"
+import IMG from "../asset/IMG.png"
 import Header from "../components/Header"
 import Section from "../components/Section"
 import Gallery from "../components/Gallery"
@@ -9,11 +10,11 @@ import Footer from "../components/Footer"
 import LogoHouse from "../asset/LogoHouse.png"
 
 const Home = (props) => {
-  // console.log(props.data)
+  const sectionText = "Chez vous, partout et ailleurs"
   return (
     <div className="Home">
       <Header />
-      <Section />
+      <Section picture={IMG} h1={sectionText} />
       <Gallery data={props.data} />
       <Footer img={LogoHouse} />
     </div>

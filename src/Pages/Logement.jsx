@@ -2,10 +2,11 @@ import React from "react"
 import { useParams } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
-import DropdownSmall from "../components/DropdownSmall"
+import DropdownLarge from "../components/Dropdown"
 import Carrousel from "../components/Carrousel"
 import Tag from "../components/Tag"
 import Stars from "../components/Stars"
+import Footer from "../components/Footer"
 // import Error from "../Pages/Error"
 
 const Logement = (props) => {
@@ -54,11 +55,20 @@ const Logement = (props) => {
           </div>
         </div>
 
-        <div className="dropSmall-container">
-          <DropdownSmall title="Description" content={description} />
-          <DropdownSmall title="Équipements" content={equipments} />
+        <div className="drop-container">
+          <div className="box-drop box1">
+            <DropdownLarge title="Description" txt={description} />
+          </div>
+          <div className="box-drop box2">
+            <DropdownLarge
+              title="Équipements"
+              txt={equipments}
+              style={rating}
+            />
+          </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
