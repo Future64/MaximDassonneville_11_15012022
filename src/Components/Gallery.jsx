@@ -23,7 +23,6 @@ const Gallery = (props) => {
           )
         })}
       </div>
-      {/* <Footer /> */}
     </>
   )
 }

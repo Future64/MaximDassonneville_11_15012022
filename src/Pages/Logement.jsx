@@ -1,5 +1,5 @@
-import React from "react"
-import { useParams } from "react-router-dom"
+import React, { useState } from "react"
+import { useParams, useNavigate, useLocation } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
 import DropdownLarge from "../components/Dropdown"
@@ -11,7 +11,16 @@ import Footer from "../components/Footer"
 
 const Logement = (props) => {
   const params = useParams()
-  const currentApt = props.data.filter((apt) => apt.id == params.id)
+  let navigate = useNavigate()
+  const loc = useLocation()
+
+  const [currentApt, useCurrentApt] = useState(
+    props.data.filter((apt) => apt.id == params.id)
+  )
+  // if (currentApt == undefined) {
+  //   return navigate("http://localhost:3000/")
+  // }
+  // console.log(currentApt)
 
   //Eléments data
   const title = currentApt[0].title

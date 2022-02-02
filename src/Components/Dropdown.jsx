@@ -39,7 +39,7 @@ const Dropdown = (props) => {
         ) : (
           <ul>
             {props.txt.map((item) => {
-              return <li>{item}</li>
+              return <li key={`${props.title} -${item}`}>{item}</li>
             })}
           </ul>
         )}
