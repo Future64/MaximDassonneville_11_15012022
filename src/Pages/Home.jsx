@@ -15,7 +15,7 @@ const Home = (props) => {
       <Header />
       <Section />
       <Gallery data={props.data} />
-      {/* <Footer img={LogoHouse} /> */}
+      <Footer img={LogoHouse} />
     </div>
   )
 }
