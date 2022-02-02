@@ -35,21 +35,24 @@ const Carrousel = (props) => {
               key={`img-${getSRC()}`}
             />
           }
-        </div>
-        <div className="arrow-Container">
-          <div>
-            <button
-              onClick={previous}
-              className={pictures.length >= 2 ? "button-left" : "buttonNone"}
-            >
-              <i className="fas fa-chevron-left"></i>
-            </button>
-            <button
-              onClick={next}
-              className={pictures.length >= 2 ? "button-right" : "buttonNone"}
-            >
-              <i className="fas fa-chevron-right"></i>
-            </button>
+          <div className="arrow-Container">
+            <div className="ContainerButton">
+              <button
+                onClick={previous}
+                className={pictures.length >= 2 ? "button-left" : "buttonNone"}
+              >
+                <i className="fas fa-chevron-left"></i>
+              </button>
+              <button
+                onClick={next}
+                className={pictures.length >= 2 ? "button-right" : "buttonNone"}
+              >
+                <i className="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            <span className="compteurPhoto">
+              {`${currentPictureIndex + 1}/${pictures.length}`}
+            </span>
           </div>
         </div>
       </div>

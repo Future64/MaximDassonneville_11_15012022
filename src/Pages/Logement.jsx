@@ -29,26 +29,28 @@ const Logement = (props) => {
         <Carrousel photos={pictures} />
       </section>
       <section className="section-Details">
-        <div className="container-Details-first">
-          <h1 className="title-Logement">{title}</h1>
-          <p className="location">{location}</p>
-          <div className="tag-Group">
-            {currentApt[0].tags.map((tag) => {
-              return <Tag tag={tag} data={hostName} key={`tag-${tag}`} />
-            })}
+        <div className="bloc-details">
+          <div className="container-Details-first">
+            <h1 className="title-Logement">{title}</h1>
+            <p className="location">{location}</p>
+            <div className="tag-Group">
+              {currentApt[0].tags.map((tag) => {
+                return <Tag tag={tag} data={hostName} key={`tag-${tag}`} />
+              })}
+            </div>
           </div>
-        </div>
 
-        <div className="container-Details-second">
-          <div className="zone-Owner">
-            <p className="name-Owner">{hostName}</p>
-            <div
-              className="photo-Owner"
-              style={{ backgroundImage: `url(${hostPicture})` }}
-            ></div>
-          </div>
-          <div className="container-Stars">
-            <Stars data={rating} />
+          <div className="container-Details-second">
+            <div className="zone-Owner">
+              <p className="name-Owner">{hostName}</p>
+              <div
+                className="photo-Owner"
+                style={{ backgroundImage: `url(${hostPicture})` }}
+              ></div>
+            </div>
+            <div className="container-Stars">
+              <Stars data={rating} />
+            </div>
           </div>
         </div>
 

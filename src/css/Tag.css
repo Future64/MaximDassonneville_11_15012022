@@ -16,3 +16,9 @@
     color: white;
     font-size: 14px;
 }
+
+@media screen and (max-width: 768px) {
+    .tag-name {
+        font-size: 10px;
+    }
+}

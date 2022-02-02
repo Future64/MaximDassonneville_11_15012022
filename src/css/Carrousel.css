@@ -1,11 +1,12 @@
 .phot-containerCarrousel {
-    position: absolute;
-    /* width: 1240px; */
-    display: flex;
-    right: 8%;
-    height: 360px;
-    left: 6.50%;
+    /* position: absolute;
     top: 171px;
+    right: 8%;
+    left: 6.50%; */
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    height: 360px;
     background: #F7F7F7;
     border-radius: 25px;
     background-color: var(--txt-color);
@@ -14,13 +15,16 @@
 }
 
 .arrow-Container {
-    position: relative;
-    right: 8%;
-    left: 6.50%;
-    top: 171px;
-    width: 85.5vw;
+    position: absolute;
+    top: 245px;
+    width: 88vw;
     height: auto;
     z-index: 100;
+}
+
+.ContainerButton {
+    display: flex;
+    justify-content: space-between;
 }
 
 .arrow-Container button {
@@ -31,18 +35,13 @@
     font-size: 100px;
 }
 
-
-/* .fa-chevron-left {
-    font-style: italic;
-} */
-
 .arrow-Container button:active {
     color: gray;
 }
 
 .button-right {
-    position: absolute;
-    right: 0px;
+    /* position: absolute; */
+    right: -20px;
 }
 
 .photo-Carrousel {
@@ -55,10 +54,34 @@
     display: none;
 }
 
+.compteurPhoto {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    bottom: -60px;
+    color: white;
+    font-size: 22px;
+}
+
 @media screen and (max-width: 870px) {
     .SectionTxt {
         top: 240px;
         font-size: 28px;
+    }
+    .arrow-Container button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 60px;
+    }
+    .compteurPhoto {
+        position: relative;
+        left: 50%;
+        right: 50%;
+        bottom: -115px;
+        color: white;
+        font-size: 22px;
     }
 }
 
@@ -74,5 +97,8 @@
     .SectionTxt {
         top: 160px;
         font-size: 23px;
+    }
+    .compteurPhoto {
+        display: none;
     }
 }
