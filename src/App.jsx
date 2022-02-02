@@ -1,6 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import { Routes, Route, useParams, useLocation } from "react-router-dom"
+import { Routes, Route, useLocation } from "react-router-dom"
 import dataAbout from "./data/DataAbout"
 import Home from "./Pages/Home"
 import Error from "./Pages/Error"
@@ -18,33 +17,19 @@ fetch(" http://localhost:3000/AllData.json ", {
   },
 })
   .then((response) => {
-    console.log(response)
     return response.json()
   })
   .then((JSONDATA) => {
     DATA = JSONDATA
-    console.log(DATA)
   })
 
 /**
  * Fonction App
  */
 const App = () => {
-  const params = useParams()
-  const location = useLocation()
   const path = "/logement/:id"
+  useLocation()
 
-  // let getData = () => {
-  //   DATA.map((item) => {
-  //     console.log(item)
-  //     if (path === location.pathname) {
-  //       return item
-  //     }
-  //     return item
-  //   })
-  // }
-
-  // console.log(DATA)
   return (
     <div className="App">
       <Routes>

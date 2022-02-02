@@ -1,18 +1,15 @@
 import "../css/gallery.css"
-import { Routes, Route, Link, useParams } from "react-router-dom"
-import Logement from "../Pages/Logement"
+import { Link } from "react-router-dom"
 import Thumb from "./Thumb"
 
 const Gallery = (props) => {
-  const params = useParams()
-  console.log(params)
   return (
     <div className="Gallery">
       {props.data.map((item) => {
         const path = `/logement/${item.id}`
 
         return (
-          <Link to={path}>
+          <Link to={path} key={`${item.title}-${item.host.name}`}>
             <Thumb
               cover={item.cover}
               title={item.title}

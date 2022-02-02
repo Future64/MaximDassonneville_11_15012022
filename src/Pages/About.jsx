@@ -11,7 +11,6 @@ const About = (props) => {
       <SectionAbout />
       <div className="dropdown-items">
         {props.data.map((item) => {
-          console.log(item.title)
           return (
             <DropdownLarge
               title={item.title}
