@@ -1,8 +1,9 @@
 .Footer {
     position: absolute;
-    top: 0;
+    bottom: -150px;
     height: 150px;
     width: 100%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;

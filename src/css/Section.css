@@ -1,10 +1,17 @@
+.Section {
+    position: relative;
+    width: 100%;
+}
+
 .phot-container {
-    position: absolute;
+    /* position: relative; */
     /* width: 1240px; */
-    right: 8%;
-    height: 223px;
+    /* right: 8%;
     left: 6.50%;
-    top: 171px;
+    top: 171px; */
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 223px;
     background: #F7F7F7;
     border-radius: 25px;
     background-color: var(--txt-color);
@@ -12,11 +19,14 @@
 }
 
 .SectionFilter {
-    position: absolute;
-    right: 8%;
+    /* position: absolute; */
+    /* right: 70px; */
+    /* left: 70px; */
+    width: 100%;
+    /* margin-left: 70px;
+    margin-right: 70px; */
+    top: -121px;
     height: 223px;
-    left: 6.50%;
-    top: 171px;
     background: #000000;
     mix-blend-mode: darken;
     opacity: 0.3;
@@ -24,12 +34,12 @@
     z-index: 1;
 }
 
-.SectionTxt {
+.SectionTxtHome {
     position: absolute;
     left: 10.9%;
     right: 10%;
-    top: 220px;
-    bottom: 69.04%;
+    top: 80px;
+    /* bottom: 69.04%; */
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -37,27 +47,46 @@
     line-height: 142.6%;
     text-align: center;
     color: #FFFFFF;
-    z-index: 2;
+    z-index: 10;
 }
 
 @media screen and (max-width: 870px) {
-    .SectionTxt {
-        top: 240px;
+    .SectionTxtHome {
+        top: 80px;
         font-size: 28px;
     }
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 740px) {
     .phot-container {
         height: 200px;
         top: 90px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
     .SectionFilter {
         height: 200px;
         top: 90px;
     }
-    .SectionTxt {
-        top: 160px;
+    .SectionTxtHome {
+        top: 80px;
         font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .SectionTxtHome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 70px;
+        font-size: 18px;
+        /* width: 150px; */
+    }
+    .phot-container {
+        height: 200px;
+        top: 90px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
