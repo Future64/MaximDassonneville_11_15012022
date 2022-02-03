@@ -16,6 +16,11 @@
             max-width: 700px;
         }
         
+        .Logement {
+            position: relative;
+            min-height: 112vh;
+        }
+        
         .location {
             font-size: 18px;
         }

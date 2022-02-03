@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useParams, useNavigate, useLocation } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
-import DropdownLarge from "../components/Dropdown"
+import Dropdown from "../components/Dropdown"
 import Carrousel from "../components/Carrousel"
 import Tag from "../components/Tag"
 import Stars from "../components/Stars"
@@ -17,10 +17,6 @@ const Logement = (props) => {
   const [currentApt, useCurrentApt] = useState(
     props.data.filter((apt) => apt.id == params.id)
   )
-  // if (currentApt == undefined) {
-  //   return navigate("http://localhost:3000/")
-  // }
-  // console.log(currentApt)
 
   //Eléments data
   const title = currentApt[0].title
@@ -66,14 +62,10 @@ const Logement = (props) => {
 
         <div className="drop-container">
           <div className="box-drop box1">
-            <DropdownLarge title="Description" txt={description} />
+            <Dropdown title="Description" txt={description} />
           </div>
           <div className="box-drop box2">
-            <DropdownLarge
-              title="Équipements"
-              txt={equipments}
-              style={rating}
-            />
+            <Dropdown title="Équipements" txt={equipments} style={rating} />
           </div>
         </div>
       </section>
