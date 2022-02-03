@@ -18,7 +18,7 @@
         
         .Logement {
             position: relative;
-            min-height: 112vh;
+            min-height: 100vh;
         }
         
         .location {
