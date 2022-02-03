@@ -49,13 +49,14 @@
     }
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 740px) {
     .Thumb {
-        width: auto;
+        width: 100%;
         height: 270px;
+        margin-top: 20px;
     }
     .Thumb-filter {
-        width: 78vw;
+        width: 100%;
         height: 270px;
     }
     .thumb-title {

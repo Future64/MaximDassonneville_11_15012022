@@ -1,26 +1,30 @@
 import React from "react"
 import "../css/about.css"
+import Kalen from "../asset/kalen.png"
 import Header from "../components/Header"
-import SectionAbout from "../components/SectionAbout"
-import DropdownLarge from "../components/DropdownLarge"
+import Section from "../components/Section"
+import Dropdown from "../components/Dropdown"
+import Footer from "../components/Footer"
 
 const About = (props) => {
+  const styleWidth = true
   return (
     <div className="About">
       <Header />
-      <SectionAbout />
+      <Section picture={Kalen} />
       <div className="dropdown-items">
         {props.data.map((item) => {
-          console.log(item.title)
           return (
-            <DropdownLarge
+            <Dropdown
               title={item.title}
               txt={item.bodyText}
               key={item.title}
+              bool={styleWidth}
             />
           )
         })}
       </div>
+      <Footer />
     </div>
   )
 }

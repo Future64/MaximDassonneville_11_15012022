@@ -1,17 +1,22 @@
 import "../css/section.css"
-import IMG from "../asset/IMG.png"
 
-const Section = () => {
-  const sectionText = "Chez vous, partout et ailleurs"
+const Section = (props) => {
   return (
-    <div className="Section">
-      <div className="SectionFilter"> </div>
-      <div
-        className="phot-container"
-        style={{ backgroundImage: `url(${IMG})` }}
-      ></div>
-      <h1 className="SectionTxt"> {sectionText} </h1>
-    </div>
+    <>
+      <div className="Section">
+        <div
+          className="phot-container"
+          style={{ backgroundImage: `url(${props.picture})` }}
+        >
+          <div className="SectionFilter"></div>
+          {props.h1 === undefined ? (
+            ""
+          ) : (
+            <h1 className="SectionTxtHome"> {props.h1} </h1>
+          )}
+        </div>
+      </div>
+    </>
   )
 }
 

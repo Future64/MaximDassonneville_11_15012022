@@ -7,3 +7,14 @@
 .star-color {
     color: var(--txt-color);
 }
+
+@media screen and (max-width: 768px) {
+    .fa-star {
+        font-size: 20px;
+        color: #E3E3E3;
+        margin-left: 5px;
+    }
+    .star-color {
+        color: var(--txt-color);
+    }
+}

@@ -1,11 +1,18 @@
+.SectionCarrousel {
+    position: relative;
+    width: 100vw;
+}
+
 .phot-containerCarrousel {
-    position: absolute;
-    /* width: 1240px; */
-    display: flex;
-    right: 8%;
-    height: 360px;
-    left: 6.50%;
+    position: relative;
+    /* position: absolute;
     top: 171px;
+    right: 8%;
+    left: 6.50%; */
+    margin-left: 70px;
+    margin-right: 70px;
+    display: flex;
+    height: 360px;
     background: #F7F7F7;
     border-radius: 25px;
     background-color: var(--txt-color);
@@ -14,13 +21,14 @@
 }
 
 .arrow-Container {
-    position: relative;
-    right: 8%;
-    left: 6.50%;
-    top: 171px;
-    width: 85.5vw;
-    height: auto;
-    z-index: 100;
+    position: absolute;
+    top: 125px;
+    min-width: 100%;
+}
+
+.ContainerButton {
+    display: flex;
+    justify-content: space-between;
 }
 
 .arrow-Container button {
@@ -29,20 +37,16 @@
     color: white;
     cursor: pointer;
     font-size: 100px;
+    width: auto;
 }
-
-
-/* .fa-chevron-left {
-    font-style: italic;
-} */
 
 .arrow-Container button:active {
     color: gray;
 }
 
 .button-right {
-    position: absolute;
-    right: 0px;
+    /* position: absolute;
+    right: 0px; */
 }
 
 .photo-Carrousel {
@@ -51,14 +55,54 @@
     object-fit: cover;
 }
 
+.buttonNone {
+    display: none;
+}
+
+.compteurPhoto {
+    position: relative;
+    left: 48%;
+    right: 50%;
+    bottom: -50px;
+    color: white;
+    font-size: 22px;
+}
+
 @media screen and (max-width: 870px) {
     .SectionTxt {
         top: 240px;
         font-size: 28px;
     }
+    .arrow-Container button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 60px;
+    }
+    .arrow-Container {
+        top: 145px
+    }
+    .compteurPhoto {
+        position: relative;
+        left: 47%;
+        right: 50%;
+        bottom: -90px;
+        color: white;
+        font-size: 22px;
+    }
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 769px) {
+    .phot-containerCarrousel {
+        position: relative;
+        /* position: absolute;
+        top: 171px;
+        right: 8%;
+        left: 6.50%; */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     .phot-container {
         height: 200px;
         top: 90px;
@@ -70,5 +114,8 @@
     .SectionTxt {
         top: 160px;
         font-size: 23px;
+    }
+    .compteurPhoto {
+        display: none;
     }
 }

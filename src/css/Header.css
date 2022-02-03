@@ -37,13 +37,14 @@
     text-decoration: underline;
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 769px) {
     .App-header img {
         height: 90px;
-        margin-left: -30px;
+        margin-left: -40px;
     }
     .Nav-list {
         margin-top: 45px;
+        margin-right: -50px;
     }
     .Nav-list li {
         margin-left: 3vw;
@@ -58,7 +59,7 @@
     .Nav-list {
         position: absolute;
         margin-top: 37px;
-        margin-right: 30px;
+        margin-right: 20px;
     }
     .Nav-list li {
         margin-left: 0vw;
