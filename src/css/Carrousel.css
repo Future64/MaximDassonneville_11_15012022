@@ -22,7 +22,7 @@
 
 .arrow-Container {
     position: absolute;
-    top: 145px;
+    top: 125px;
     min-width: 100%;
 }
 
@@ -61,7 +61,7 @@
 
 .compteurPhoto {
     position: relative;
-    left: 50%;
+    left: 48%;
     right: 50%;
     bottom: -50px;
     color: white;
@@ -80,9 +80,12 @@
         cursor: pointer;
         font-size: 60px;
     }
+    .arrow-Container {
+        top: 145px
+    }
     .compteurPhoto {
         position: relative;
-        left: 50%;
+        left: 47%;
         right: 50%;
         bottom: -90px;
         color: white;
