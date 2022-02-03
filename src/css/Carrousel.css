@@ -1,4 +1,10 @@
+.SectionCarrousel {
+    position: relative;
+    width: 100vw;
+}
+
 .phot-containerCarrousel {
+    position: relative;
     /* position: absolute;
     top: 171px;
     right: 8%;
@@ -16,10 +22,8 @@
 
 .arrow-Container {
     position: absolute;
-    top: 245px;
-    width: 88vw;
-    height: auto;
-    z-index: 100;
+    top: 145px;
+    min-width: 100%;
 }
 
 .ContainerButton {
@@ -33,6 +37,7 @@
     color: white;
     cursor: pointer;
     font-size: 100px;
+    width: auto;
 }
 
 .arrow-Container button:active {
@@ -40,8 +45,8 @@
 }
 
 .button-right {
-    /* position: absolute; */
-    right: -20px;
+    /* position: absolute;
+    right: 0px; */
 }
 
 .photo-Carrousel {
@@ -58,7 +63,7 @@
     position: relative;
     left: 50%;
     right: 50%;
-    bottom: -60px;
+    bottom: -50px;
     color: white;
     font-size: 22px;
 }
@@ -79,13 +84,22 @@
         position: relative;
         left: 50%;
         right: 50%;
-        bottom: -115px;
+        bottom: -90px;
         color: white;
         font-size: 22px;
     }
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 769px) {
+    .phot-containerCarrousel {
+        position: relative;
+        /* position: absolute;
+        top: 171px;
+        right: 8%;
+        left: 6.50%; */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
     .phot-container {
         height: 200px;
         top: 90px;
