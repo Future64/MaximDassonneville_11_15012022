@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom"
-import "../css/thumb.css"
+import "../css/Thumb.css"
 
 const Thumb = (props) => {
-  // console.log(props)
   return (
     <>
       <div className="Thumb" style={{ backgroundImage: `url(${props.cover})` }}>

@@ -1,14 +1,11 @@
 .Section {
     position: relative;
     width: 100%;
+    text-align: center;
 }
 
 .phot-container {
-    /* position: relative; */
-    /* width: 1240px; */
-    /* right: 8%;
-    left: 6.50%;
-    top: 171px; */
+    text-align: center;
     margin-left: 70px;
     margin-right: 70px;
     height: 223px;
@@ -19,12 +16,7 @@
 }
 
 .SectionFilter {
-    /* position: absolute; */
-    /* right: 70px; */
-    /* left: 70px; */
     width: 100%;
-    /* margin-left: 70px;
-    margin-right: 70px; */
     top: -121px;
     height: 223px;
     background: #000000;
@@ -35,11 +27,10 @@
 }
 
 .SectionTxtHome {
-    position: absolute;
-    left: 10.9%;
-    right: 10%;
-    top: 80px;
-    /* bottom: 69.04%; */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -140px;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -52,7 +43,7 @@
 
 @media screen and (max-width: 870px) {
     .SectionTxtHome {
-        top: 80px;
+        top: -140px;
         font-size: 28px;
     }
 }
@@ -69,7 +60,7 @@
         top: 90px;
     }
     .SectionTxtHome {
-        top: 80px;
+        top: -120px;
         font-size: 23px;
     }
 }
@@ -79,9 +70,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 70px;
+        top: -120px;
         font-size: 18px;
-        /* width: 150px; */
     }
     .phot-container {
         height: 200px;

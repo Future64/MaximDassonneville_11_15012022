@@ -1,5 +1,5 @@
 import React from "react"
-import "../css/about.css"
+import "../css/About.css"
 import Kalen from "../asset/kalen.png"
 import Header from "../components/Header"
 import Section from "../components/Section"

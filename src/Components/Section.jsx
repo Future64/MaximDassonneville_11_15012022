@@ -1,4 +1,4 @@
-import "../css/section.css"
+import "../css/Section.css"
 
 const Section = (props) => {
   return (
