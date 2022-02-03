@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useParams, useNavigate, useLocation } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
 import Dropdown from "../components/Dropdown"
@@ -7,15 +7,11 @@ import Carrousel from "../components/Carrousel"
 import Tag from "../components/Tag"
 import Stars from "../components/Stars"
 import Footer from "../components/Footer"
-// import Error from "../Pages/Error"
 
 const Logement = (props) => {
   const params = useParams()
-  let navigate = useNavigate()
-  const loc = useLocation()
-
-  const [currentApt, useCurrentApt] = useState(
-    props.data.filter((apt) => apt.id == params.id)
+  const [currentApt] = useState(
+    props.data.filter((apt) => apt.id === params.id)
   )
 
   //Eléments data

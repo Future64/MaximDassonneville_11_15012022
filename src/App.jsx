@@ -1,10 +1,10 @@
 import React from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 import dataAbout from "./data/DataAbout"
-import Home from "./Pages/Home"
-import Error from "./Pages/Error"
-import About from "./Pages/About"
-import Logement from "./Pages/Logement"
+import Home from "./pages/Home"
+import Error from "./pages/Error"
+import About from "./pages/About"
+import Logement from "./pages/Logement"
 
 /**
  * Import des datas venant du fichier AllData.json

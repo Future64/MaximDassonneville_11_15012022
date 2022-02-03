@@ -1,6 +1,4 @@
 import React from "react"
-import ReactDom from "react-dom"
-import { Routes, Route } from "react-router-dom"
 import "../css/Home.css"
 import IMG from "../asset/IMG.png"
 import Header from "../components/Header"

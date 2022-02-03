@@ -1,11 +1,8 @@
 import React, { useState } from "react"
-
 import "../css/dropdown.css"
 
 const Dropdown = (props) => {
   let [openBody, UseOpenBody] = useState(false)
-
-  console.log(props.style)
 
   const handleBodyDropdown = () => {
     openBody === false
