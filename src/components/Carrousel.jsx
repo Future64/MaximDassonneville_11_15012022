@@ -50,7 +50,7 @@ const Carrousel = (props) => {
                 <i className="fas fa-chevron-right"></i>
               </button>
             </div>
-            <span className="compteurPhoto">
+            <span className={pictures.length >= 2 ? "compteurPhoto": "compteurPhoto displayNone"}> 
               {`${currentPictureIndex + 1}/${pictures.length}`}
             </span>
           </div>

@@ -68,6 +68,10 @@
     font-size: 22px;
 }
 
+.displayNone{
+    display: none;
+}
+
 @media screen and (max-width: 870px) {
     .SectionTxt {
         top: 240px;

@@ -8,6 +8,7 @@ import Logement from "./pages/Logement"
 import DATA from"./data/DATA"
 
 
+
 const App = () => {
 
   const [ myDATA, setDATA] = useState([])
@@ -18,7 +19,6 @@ const App = () => {
         return response.json()
       })
       .then(data => {
-        console.log(data)
         setDATA(data)
       })
     }, [])

@@ -1,22 +1,18 @@
-import {useState} from 'react'
 import "../css/Gallery.css"
 import { Link } from "react-router-dom"
 import Thumb from "./Thumb"
 
 
 const Gallery = (props) => {
-  // let[ usersData, useUsersData] = useState(props)
-  // useUsersData(usersData)
-
-
     return (
-      <>
         <div className="Gallery">
           {props.data.map((item) => {
             const path = `/logement/${item.id}`
   
             return (
-              <Link to={path} key={`${item.title}-${item.host.name}`}>
+              <Link 
+                to={path} 
+                key={`${item.title}-${item.host.name}`}>
                 <Thumb
                   cover={item.cover}
                   title={item.title}
@@ -28,7 +24,6 @@ const Gallery = (props) => {
             )
           })}
         </div>
-      </>
     )
 }
 
