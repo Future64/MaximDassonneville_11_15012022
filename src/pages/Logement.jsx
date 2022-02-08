@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useParams } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import { Navigate } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
 import Dropdown from "../components/Dropdown"
@@ -8,7 +8,7 @@ import Carrousel from "../components/Carrousel"
 import Tag from "../components/Tag"
 import Stars from "../components/Stars"
 import Footer from "../components/Footer"
-import Error from "./Error"
+
 
 const Logement = (props) => {
   const params = useParams()
@@ -16,13 +16,9 @@ const Logement = (props) => {
     props.data.filter((apt) => apt.id === params.id)
   )
 
-  let navigate = useNavigate()
-  console.log(currentApt)
-
-  
-  if(currentApt == undefined){
-    console.log("coucou")
-    return navigate("/*") 
+  //Redirection vers la page Error si l'id de la page ne correspond pas
+  if (currentApt.length === 0) {
+    return <Navigate replace to="/*" />;
   }
   
   //Eléments data
