@@ -5,14 +5,14 @@ import Thumb from "./Thumb"
 
 
 const Gallery = (props) => {
-  let[ usersData, useUsersData] = useState(props)
+  // let[ usersData, useUsersData] = useState(props)
   // useUsersData(usersData)
 
 
     return (
       <>
         <div className="Gallery">
-          {usersData.data.map((item) => {
+          {props.data.map((item) => {
             const path = `/logement/${item.id}`
   
             return (

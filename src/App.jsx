@@ -10,14 +10,15 @@ import DATA from"./data/DATA"
 
 const App = () => {
 
-  const [ myDATA, setDATA] = useState(DATA)
+  const [ myDATA, setDATA] = useState([])
 
   useEffect( () => {
-    fetch("http://localhost:3000/AllData.json")
+    fetch("./AllData.json")
       .then(response => {
         return response.json()
       })
       .then(data => {
+        console.log(data)
         setDATA(data)
       })
     }, [])
@@ -32,7 +33,7 @@ const App = () => {
           <Route path="/" element={<Home data={myDATA} />} />
           <Route path="/about" element={<About data={dataAbout} />} />
           <Route path={path} element={<Logement data={myDATA} />} />
-          <Route path="*" element={<Error />} />
+          <Route path="/*" element={<Error />} />
         </Routes>
       </div>
     ) 

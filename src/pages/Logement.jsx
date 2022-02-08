@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import "../css/Logement.css"
 import Header from "../components/Header"
 import Dropdown from "../components/Dropdown"
@@ -7,6 +8,7 @@ import Carrousel from "../components/Carrousel"
 import Tag from "../components/Tag"
 import Stars from "../components/Stars"
 import Footer from "../components/Footer"
+import Error from "./Error"
 
 const Logement = (props) => {
   const params = useParams()
@@ -14,6 +16,15 @@ const Logement = (props) => {
     props.data.filter((apt) => apt.id === params.id)
   )
 
+  let navigate = useNavigate()
+  console.log(currentApt)
+
+  
+  if(currentApt == undefined){
+    console.log("coucou")
+    return navigate("/*") 
+  }
+  
   //Eléments data
   const title = currentApt[0].title
   const pictures = currentApt[0].pictures
@@ -23,7 +34,7 @@ const Logement = (props) => {
   const rating = currentApt[0].rating
   const description = currentApt[0].description
   const equipments = currentApt[0].equipments
-
+  
   return (
     <div className="Logement">
       <Header />
