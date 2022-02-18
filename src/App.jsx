@@ -5,8 +5,6 @@ import Home from "./pages/Home"
 import Error from "./pages/Error"
 import About from "./pages/About"
 import Logement from "./pages/Logement"
-import DATA from"./data/DATA"
-
 
 
 const App = () => {
