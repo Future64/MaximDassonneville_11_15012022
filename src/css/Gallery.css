@@ -26,8 +26,11 @@
 
 @media screen and (max-width: 495px) {
     .Gallery {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
         flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: transparent;
     }
 }
