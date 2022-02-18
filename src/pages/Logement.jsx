@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Navigate } from "react-router-dom"
 import "../css/Logement.css"
@@ -10,11 +10,28 @@ import Stars from "../components/Stars"
 import Footer from "../components/Footer"
 
 
+
 const Logement = (props) => {
   const params = useParams()
   const [currentApt] = useState(
     props.data.filter((apt) => apt.id === params.id)
   )
+
+  const [ find, setFind] = useState()
+
+  useEffect( () => {
+    fetch("../AllData.json")
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        data.map(item => {
+          let findData = data.data.id.find(id => id == params.id )
+          setFind(findData)
+        })
+      })
+    }, [])
+console.log(find);
 
   //Redirection vers la page Error si l'id de la page ne correspond pas
   if (currentApt.length === 0) {
@@ -30,7 +47,6 @@ const Logement = (props) => {
   const rating = currentApt[0].rating
   const description = currentApt[0].description
   const equipments = currentApt[0].equipments
-  
   return (
     <div className="Logement">
       <Header />
@@ -68,7 +84,7 @@ const Logement = (props) => {
             <Dropdown title="Description" txt={description} />
           </div>
           <div className="box-drop box2">
-            <Dropdown title="Équipements" txt={equipments} style={rating} />
+            <Dropdown title="Équipements" txt={equipments} />
           </div>
         </div>
       </section>

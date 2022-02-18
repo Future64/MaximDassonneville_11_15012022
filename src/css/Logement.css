@@ -19,6 +19,8 @@
         .Logement {
             position: relative;
             min-height: 100vh;
+            max-width: 1440px;
+            margin: auto;
         }
         
         .location {
@@ -62,7 +64,6 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            
         }
         
         .bloc-details {

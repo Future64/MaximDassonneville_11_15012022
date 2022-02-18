@@ -1,6 +1,6 @@
 .SectionCarrousel {
     position: relative;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 .phot-containerCarrousel {
@@ -68,7 +68,7 @@
     font-size: 22px;
 }
 
-.displayNone{
+.displayNone {
     display: none;
 }
 

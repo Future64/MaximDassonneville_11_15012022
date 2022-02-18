@@ -2,27 +2,19 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 1440px;
+    margin: auto;
     min-height: 100vh;
 }
 
 .dropdown-items {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     align-items: center;
     margin-top: 20px;
     height: 30%;
-    width: 100%;
+    padding: 0 180px 0 180px;
     margin-bottom: 40px;
-}
-
-@media screen and (max-width: 698px) {
-    .dropdown-items {
-        /* position: relative; */
-        top: 0px;
-        height: 100%;
-        width: 100%;
-    }
 }
