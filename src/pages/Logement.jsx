@@ -17,7 +17,8 @@ const Logement = (props) => {
     props.data.filter((apt) => apt.id === params.id)
   )
 
-  const [ find, setFind] = useState()
+  let [ find, setFind] = useState()
+  let [dataFetched, setDataFetched]  = useState()
 
   useEffect( () => {
     fetch("../AllData.json")
@@ -25,14 +26,22 @@ const Logement = (props) => {
         return response.json()
       })
       .then(data => {
-        data.map(item => {
-          let findData = data.data.id.find(id => id == params.id )
-          setFind(findData)
-        })
+        setDataFetched(data) 
       })
     }, [])
-console.log(find);
-
+    
+    // console.log(dataFetched)
+    // for(let i = 0; i < dataFetched.length; i++){
+    //   console.log(dataFetched[i].id)
+    //   // if(dataFetched[i].id === params.id){
+    //   //   const findData = dataFetched[i].id
+    //   //   setFind(findData)
+    //   // }
+    //   // let findData = dataFetched[i].id.find(id => id === params.id )
+    //   // setFind(findData)
+    // }
+    
+    // console.log(find);
   //Redirection vers la page Error si l'id de la page ne correspond pas
   if (currentApt.length === 0) {
     return <Navigate replace to="/*" />;

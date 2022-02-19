@@ -5,7 +5,7 @@ const Dropdown = (props) => {
   let [openBody, UseOpenBody] = useState(false)
 
   
-  const handleBodyDropdown = () => { //Fonction qui fait changer le state de oppenBody
+  const handleBodyDropdown = () => { //Fonction qui gère l'ouverture/fermeture et up/down des dropdowns
     openBody === false
       ? UseOpenBody((openBody = true))
       : UseOpenBody((openBody = false))
@@ -14,7 +14,7 @@ const Dropdown = (props) => {
   return (
     <div
       className={`dropdown-Container ${
-        props.bool === true ? "classWidth" : "" // Ajout de la classe "classWidth" si il recoit les props
+        props.bool === true ? "classWidth" : "" // Redimentionnement des dropdowns de la page logement
       }`}
     >
       <div className="dropdown-head">
@@ -22,14 +22,14 @@ const Dropdown = (props) => {
         <button onClick={handleBodyDropdown} className="dropdownMain-arrow">
           <i
             className={
-              openBody ? "fas fa-chevron-down up" : "fas fa-chevron-down down" //changement de classe en fonction du state openBody
+              openBody ? "fas fa-chevron-down up" : "fas fa-chevron-down down" // up/down du chevron du dropdown
             }
           ></i>
         </button>
       </div>
       <div
         className={
-          openBody ? "dropdown-body openBody" : "dropdown-body closeBody" //changement de classe en fonction du state openBody
+          openBody ? "dropdown-body openBody" : "dropdown-body closeBody" // Ouverture/fermeture du corps du dropdown
         }
       >
         {Array.isArray(props.txt) === false ? ( // gestion du contenu des dropdowns en fonction de si c'est un tableau ou pas
