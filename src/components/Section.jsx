@@ -9,7 +9,7 @@ const Section = (props) => {
           style={{ backgroundImage: `url(${props.picture})` }}
         >
           <div className="SectionFilter"></div>
-          {props.h1 === undefined ? (
+          {props.h1 === undefined ? ( // Affiche le texte dans la Home page
             ""
           ) : (
             <h1 className="SectionTxtHome"> {props.h1} </h1>

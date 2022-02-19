@@ -7,11 +7,11 @@ const Stars = (props) => {
     const ratingCurrent = props.data
     let ratingCollection = []
 
-    for (let i = 0; i < ratingMax; i++) {
+    for (let i = 0; i < ratingMax; i++) { 
       ratingCollection.push(
         <i
           className={
-            i < ratingCurrent ? "fas fa-star star-color" : "fas fa-star"
+            i < ratingCurrent ? "fas fa-star star-color" : "fas fa-star" // Colorise les étoiles autant qu'il y a d'itération
           }
           key={`star-${[i]}`}
         ></i>

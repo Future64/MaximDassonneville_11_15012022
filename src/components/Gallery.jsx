@@ -5,8 +5,8 @@ import Thumb from "./Thumb"
 
 const Gallery = (props) => {
     return (
-        <div className="Gallery">
-          {props.data.map((item) => {
+        <div className="Gallery"> 
+          {props.data.map((item) => { // Créer toutes les cards des logements en itérant les props
             const path = `/logement/${item.id}`
   
             return (

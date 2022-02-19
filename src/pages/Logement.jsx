@@ -68,7 +68,7 @@ const Logement = (props) => {
             <h1 className="title-Logement">{title}</h1>
             <p className="location">{location}</p>
             <div className="tag-Group">
-              {currentApt[0].tags.map((tag) => {
+              {currentApt[0].tags.map((tag) => { // Créer autant de tag qu'il y a de props à itérer
                 return <Tag tag={tag} data={hostName} key={`tag-${tag}`} />
               })}
             </div>

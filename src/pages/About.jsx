@@ -13,7 +13,7 @@ const About = (props) => {
       <Header />
       <Section picture={Kalen} />
       <div className="dropdown-items">
-        {props.data.map((item) => {
+        {props.data.map((item) => { // créer autant de dropdown qu'il y a de props à itérer
           return (
             <Dropdown
               title={item.title}
