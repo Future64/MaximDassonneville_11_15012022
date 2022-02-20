@@ -18,3 +18,17 @@
     padding: 0 180px 0 180px;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 370px) {
+    .dropdown-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin-top: 20px;
+        height: 30%;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+}

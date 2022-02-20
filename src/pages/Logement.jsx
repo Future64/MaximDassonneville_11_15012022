@@ -12,16 +12,17 @@ import Footer from "../components/Footer"
 
 
 const Logement = (props) => {
-  const params = useParams()
-  const [currentApt] = useState(
-    props.data.filter((apt) => apt.id === params.id)
-  )
-
-  let [ find, setFind] = useState()
-  let [dataFetched, setDataFetched]  = useState()
-
-  useEffect( () => {
-    fetch("../AllData.json")
+  const params = useParams() 
+  
+  const [dataFetched, setDataFetched]  = useState()
+  
+  const [currentApt] = useState( 
+    props.data.filter((apt) => apt.id === params.id) // Aappartement en cours 
+    )
+    
+    
+    useEffect( () => { // Attrape les datas pour les stocker dans "dataFetched"
+      fetch("../AllData.json")
       .then(response => {
         return response.json()
       })
@@ -30,32 +31,24 @@ const Logement = (props) => {
       })
     }, [])
     
-    // console.log(dataFetched)
-    // for(let i = 0; i < dataFetched.length; i++){
-    //   console.log(dataFetched[i].id)
-    //   // if(dataFetched[i].id === params.id){
-    //   //   const findData = dataFetched[i].id
-    //   //   setFind(findData)
-    //   // }
-    //   // let findData = dataFetched[i].id.find(id => id === params.id )
-    //   // setFind(findData)
-    // }
-    
-    // console.log(find);
-  //Redirection vers la page Error si l'id de la page ne correspond pas
-  if (currentApt.length === 0) {
+
+  let [ apt, setApt] = useState(currentApt[0]) // Valeur final diffusé à toute la page
+  // console.log( props.data)
+
+  
+  if (currentApt.length === 0) { //Redirection vers la page Error si l'id de la page ne correspond pas
     return <Navigate replace to="/*" />;
   }
   
   //Eléments data
-  const title = currentApt[0].title
-  const pictures = currentApt[0].pictures
-  const location = currentApt[0].location
-  const hostName = currentApt[0].host.name
-  const hostPicture = currentApt[0].host.picture
-  const rating = currentApt[0].rating
-  const description = currentApt[0].description
-  const equipments = currentApt[0].equipments
+  const title = apt.title
+  const pictures = apt.pictures
+  const location = apt.location
+  const hostName = apt.host.name
+  const hostPicture = apt.host.picture
+  const rating = apt.rating
+  const description = apt.description
+  const equipments = apt.equipments
   return (
     <div className="Logement">
       <Header />
