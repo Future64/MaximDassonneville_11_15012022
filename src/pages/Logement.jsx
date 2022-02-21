@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import { useParams } from "react-router-dom"
 import { Navigate } from "react-router-dom"
 import "../css/Logement.css"
@@ -13,29 +13,13 @@ import Footer from "../components/Footer"
 
 const Logement = (props) => {
   const params = useParams() 
-  
-  const [dataFetched, setDataFetched]  = useState()
-  
-  const [currentApt] = useState( 
+  let [currentApt] = useState( 
     props.data.filter((apt) => apt.id === params.id) // Aappartement en cours 
     )
-    
-    
-    useEffect( () => { // Attrape les datas pour les stocker dans "dataFetched"
-      fetch("../AllData.json")
-      .then(response => {
-        return response.json()
-      })
-      .then(data => {
-        setDataFetched(data) 
-      })
-    }, [])
-    
 
   let [ apt, setApt] = useState(currentApt[0]) // Valeur final diffusé à toute la page
-  // console.log( props.data)
 
-  
+  // return <Navigate replace to="/*" />
   if (currentApt.length === 0) { //Redirection vers la page Error si l'id de la page ne correspond pas
     return <Navigate replace to="/*" />;
   }
@@ -94,5 +78,4 @@ const Logement = (props) => {
     </div>
   )
 }
-
 export default Logement
