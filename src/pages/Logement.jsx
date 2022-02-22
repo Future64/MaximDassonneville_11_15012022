@@ -8,54 +8,55 @@ import Carrousel from "../components/Carrousel";
 import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Footer from "../components/Footer";
-import data from "../AllData.json"
+import Loader from "../components/Loader";
+// import data from "../AllData.json"
 
 const Logement = (props) => {
   const params = useParams();
-
-
-  let [apt, setApt] = useState(data.find((apt) => apt.id === params.id))
-
-
-  // useEffect(() => {
-  //     fetch("../AllData.json")
-  //       .then((response) => {
-  //         return response.json();
-  //       })
-  //       .then((obj) => {
-  //         localStorage.setItem('apt', JSON.stringify(obj))
-
-  //       let data = JSON.parse(JSON.stringify(obj))
-  //       const foundApt = data.find((apt) => apt.id === params.id)
-
-  //       if(!foundApt){
-  //         return <Navigate replace to="/*" />
-  //       }
-  //         setApt(foundApt)
-
-  //         return () => {
-  //           data.abort();
-  //       }
-  //       },[])
-
-  //   })
+  const [apt, setApt] = useState()
+  const[loading, setLoading] = useState(false)
 
   useEffect(() => {
-    localStorage.setItem('apt', JSON.stringify(data))
+    console.log("Avant tout")
+    setLoading(true)
+      fetch("../AllData.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          setApt(data.find((apt) => apt.id === params.id))
+          setLoading(false)
 
-    const foundApt = data.find((apt) => apt.id === params.id)
-    if(!foundApt){
-      return <Navigate replace to="/*" />
+        })
+        
+      ,[apt, loading]
+    })
+
+    if(loading){
+      return <Loader />
     }
-    console.log(foundApt)
-    setApt(foundApt)
-  },[])
+    
+    // console.log(useEffect)
+    console.log(params.id)
+    console.log(apt)
+  // useEffect(() => {
+  //   localStorage.setItem('apt', JSON.stringify(data))
 
-  console.log(apt)
-  if (!apt) {
-    return <Navigate replace to="/*" />
-  }
+  //   const foundApt = data.find((apt) => apt.id === params.id)
+  //   if(!foundApt){
+  //     return <Navigate replace to="/*" />
+  //   }
+  //   console.log(foundApt)
+  //   setApt(foundApt)
+  // },[])
 
+  // console.log(apt)
+  // if (!apt) {
+  //   return <Navigate replace to="/*" />
+  // }
+  // if(!foundApt){
+  //   return <Navigate replace to="/*" />
+  // }
 
   return (
     <div className="Logement">
