@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from "react"
+import { React, useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import "../css/Logement.css";
@@ -12,58 +12,50 @@ import data from "../AllData.json"
 
 const Logement = (props) => {
   const params = useParams();
-  // let [currentApt] = useState(
-  //   props.data.filter((apt) => apt.id === params.id) // Aappartement en cours
-  // );
 
-  // let title = "";
-  // let pictures = [];
-  // let location = "";
-  // let hostName = "";
-  // let hostPicture = '';
-  // let rating = 0;
-  // let description = "";
-  // let equipments = [];
-  // let tags = []
-  const [apt, setApt] = useState({
-    tags:[],
-    pictures: [],
-  })
+
+  let [apt, setApt] = useState(data.find((apt) => apt.id === params.id))
+
+
   // useEffect(() => {
-  //   fetch("http://localhost:3000/public/AllData.json")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-        const foundApt = data.find((apt) => apt.id == params.id);
-        if(!foundApt){
-          return <Navigate replace to="/*" />
-        }
+  //     fetch("../AllData.json")
+  //       .then((response) => {
+  //         return response.json();
+  //       })
+  //       .then((obj) => {
+  //         localStorage.setItem('apt', JSON.stringify(obj))
 
-        setApt(foundApt)
-      //Eléments data
-      
-        //  title = apt.title;
-        //  pictures = apt.pictures;
-        //  location = apt.location;
-        //  hostName = apt.host.name;
-        //  hostPicture = apt.host.picture;
-        //  rating = apt.rating;
-        //  description = apt.description;
-        //  equipments = apt.equipments;
-        //  tags = apt.tags
-  //     });
-  // }, []);
+  //       let data = JSON.parse(JSON.stringify(obj))
+  //       const foundApt = data.find((apt) => apt.id === params.id)
 
-  // let [apt, setApt] = useState(currentApt[0]); // Valeur final diffusé à toute la page
+  //       if(!foundApt){
+  //         return <Navigate replace to="/*" />
+  //       }
+  //         setApt(foundApt)
 
-  // return <Navigate replace to="/*" />
-  // if (currentApt.length === 0) {
-  //   //Redirection vers la page Error si l'id de la page ne correspond pas
-  //   return <Navigate replace to="/*" />;
-  // }
+  //         return () => {
+  //           data.abort();
+  //       }
+  //       },[])
 
-  //Eléments data
+  //   })
+
+  useEffect(() => {
+    localStorage.setItem('apt', JSON.stringify(data))
+
+    const foundApt = data.find((apt) => apt.id === params.id)
+    if(!foundApt){
+      return <Navigate replace to="/*" />
+    }
+    console.log(foundApt)
+    setApt(foundApt)
+  },[])
+
+  console.log(apt)
+  if (!apt) {
+    return <Navigate replace to="/*" />
+  }
+
 
   return (
     <div className="Logement">
@@ -79,17 +71,17 @@ const Logement = (props) => {
             <div className="tag-Group">
               {apt.tags.map((tag) => {
                 // Créer autant de tag qu'il y a de props à itérer
-                return <Tag tag={tag} data={apt.hostName} key={`tag-${tag}`} />;
+                return <Tag tag={tag} data={apt.tags} key={`tag-${tag}`} />;
               })}
             </div>
           </div>
 
           <div className="container-Details-second">
             <div className="zone-Owner">
-              <p className="name-Owner">{apt.hostName}</p>
+              <p className="name-Owner">{apt.host.name}</p>
               <div
                 className="photo-Owner"
-                style={{ backgroundImage: `url(${apt.hostPicture})` }}
+                style={{ backgroundImage: `url(${apt.host.picture})` }}
               ></div>
             </div>
             <div className="container-Stars">
@@ -109,6 +101,7 @@ const Logement = (props) => {
       </section>
       <Footer />
     </div>
-  );
-};
-export default Logement;
+  )
+}
+
+export default Logement

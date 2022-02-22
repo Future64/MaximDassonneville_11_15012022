@@ -18,11 +18,13 @@ const App = () => {
         return response.json()
       })
       .then(data => {
-        setDATA(data)
+        localStorage.setItem('apt', JSON.stringify(data))
+        let fullData = JSON.parse(JSON.stringify(data))
+        setDATA(fullData)
       })
     }, [])
 
-    
+    console.log(myDATA);
   const path = "/logement/:id"
   useLocation()
   
