@@ -15,22 +15,23 @@ const Logement = (props) => {
   const params = useParams();
   const [apt, setApt] = useState()
   const[loading, setLoading] = useState(false)
+  
 
   useEffect(() => {
     console.log("Avant tout")
     setLoading(true)
-      fetch("../AllData.json")
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          setApt(data.find((apt) => apt.id === params.id))
-          setLoading(false)
+    fetch("../AllData.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setApt(data.find((apt) => apt.id === params.id))
+        setLoading(false)
 
-        })
-        
-      ,[apt, loading]
-    })
+      })
+    },[apt, loading])
+    
+
 
     if(loading){
       return <Loader />
