@@ -1,6 +1,6 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import "../css/Header.css"
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import '../css/Header.css'
 
 const Header = () => {
   return (
@@ -15,7 +15,7 @@ const Header = () => {
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) => (isActive ? "activeLink" : "")} // Lien surligné dans la page en cours
+                className={({ isActive }) => (isActive ? 'activeLink' : '')} // Lien surligné dans la page en cours
               >
                 Accueil
               </NavLink>
@@ -23,7 +23,7 @@ const Header = () => {
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) => (isActive ? "activeLink" : "")} // Lien surligné dans la page en cours
+                className={({ isActive }) => (isActive ? 'activeLink' : '')} // Lien surligné dans la page en cours
               >
                 A propos
               </NavLink>

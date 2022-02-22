@@ -1,10 +1,10 @@
-import React from "react"
-import "../css/About.css"
-import Kalen from "../asset/kalen.png"
-import Header from "../components/Header"
-import Section from "../components/Section"
-import Dropdown from "../components/Dropdown"
-import Footer from "../components/Footer"
+import React from 'react'
+import '../css/About.css'
+import Kalen from '../asset/kalen.png'
+import Header from '../components/Header'
+import Section from '../components/Section'
+import Dropdown from '../components/Dropdown'
+import Footer from '../components/Footer'
 
 const About = (props) => {
   const styleWidth = true
@@ -13,7 +13,8 @@ const About = (props) => {
       <Header />
       <Section picture={Kalen} />
       <div className="dropdown-items">
-        {props.data.map((item) => { // créer autant de dropdown qu'il y a de props à itérer
+        {props.data.map((item) => {
+          // créer autant de dropdown qu'il y a de props à itérer
           return (
             <Dropdown
               title={item.title}

@@ -1,5 +1,5 @@
-import React from "react"
-import "../css/stars.css"
+import React from 'react'
+import '../css/stars.css'
 
 const Stars = (props) => {
   const renderStars = () => {
@@ -7,11 +7,12 @@ const Stars = (props) => {
     const ratingCurrent = props.data
     let ratingCollection = []
 
-    for (let i = 0; i < ratingMax; i++) { 
+    // Colorise les étoiles autant qu'il y a d'itération
+    for (let i = 0; i < ratingMax; i++) {
       ratingCollection.push(
         <i
           className={
-            i < ratingCurrent ? "fas fa-star star-color" : "fas fa-star" // Colorise les étoiles autant qu'il y a d'itération
+            i < ratingCurrent ? 'fas fa-star star-color' : 'fas fa-star'
           }
           key={`star-${[i]}`}
         ></i>
