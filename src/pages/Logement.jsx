@@ -9,7 +9,7 @@ import Tag from '../components/Tag'
 import Stars from '../components/Stars'
 import Footer from '../components/Footer'
 
-const Logement = (props) => {
+const Logement = () => {
   const params = useParams()
   const [apt, setApt] = useState('')
 
@@ -24,7 +24,7 @@ const Logement = (props) => {
 
   // Affiche la page d'erreur si apt n'a pas les datas
   if (apt === undefined) {
-    return <Navigate to="*" />
+    return <Navigate to="/*" />
   }
 
   return (

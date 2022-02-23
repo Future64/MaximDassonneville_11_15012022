@@ -6,14 +6,14 @@ import Gallery from '../components/Gallery'
 import Footer from '../components/Footer'
 import LogoHouse from '../asset/LogoHouse.png'
 
-const Home = (props) => {
+const Home = () => {
   const sectionText = 'Chez vous, partout et ailleurs'
 
   return (
     <div className="Home">
       <Header />
       <Section picture={IMG} h1={sectionText} />
-      <Gallery data={props.data} />
+      <Gallery  />
       <Footer img={LogoHouse} />
     </div>
   )
